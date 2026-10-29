@@ -123,7 +123,7 @@ Esta seção será atualizada com materiais produzidos durante os estudos, inclu
 - Capturas de tela das execuções.
 - Validações de respostas HTTP.
 - Relatórios de bugs.
-- Relatórios de execução, conforme forem estudados e produzidos.
+- Relatórios de execução.
 
 Somente serão adicionadas evidências de atividades efetivamente realizadas.
 
@@ -157,3 +157,13 @@ As atividades, documentações e evidências publicadas neste repositório serã
 ---
 
 **Portfólio de estudos em QA | Testes de API com Postman**
+
+---
+
+## 👤 Autor
+
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/joseaneoliveira-qa)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Joxonho)
+
+---
