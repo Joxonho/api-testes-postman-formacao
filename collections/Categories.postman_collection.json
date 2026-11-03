@@ -1,0 +1,230 @@
+{
+  "info": {
+    "_postman_id": "e3e1a4c2-3589-4789-806c-32062a373408",
+    "name": "Categories",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57907593"
+  },
+  "item": [
+    {
+      "name": "Listagem",
+      "item": [
+        {
+          "name": "Cadastro",
+          "item": [
+            {
+              "name": "Validar campos obrigatorios",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": null,\r\n  \"description\": null\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://northwind-test-platform.vercel.app/api/v1/categories",
+                  "protocol": "https",
+                  "host": [
+                    "northwind-test-platform",
+                    "vercel",
+                    "app"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "categories"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Busca por ID inexistente",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Base URL}}/categories/:id",
+                  "host": [
+                    "{{Base URL}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "75987"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Busca por ID invalido",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Base URL}}/categories/:id",
+                  "host": [
+                    "{{Base URL}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "-09"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Busca por ID negativo",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://northwind-test-platform.vercel.app/api/v1/categories/:id",
+                  "protocol": "https",
+                  "host": [
+                    "northwind-test-platform",
+                    "vercel",
+                    "app"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "-98"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Busca por ID longo",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{json_web_token_1643}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Base URL}}/categories/:id",
+                  "host": [
+                    "{{Base URL}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "987766"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Busca por ID existente",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{json_web_token_1643}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://northwind-test-platform.vercel.app/api/v1/categories/:id",
+                  "protocol": "https",
+                  "host": [
+                    "northwind-test-platform",
+                    "vercel",
+                    "app"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "1032"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "json_web_token_0ftm",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_04ua",
+      "secret": true
+    }
+  ]
+}
