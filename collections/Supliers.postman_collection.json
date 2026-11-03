@@ -1,0 +1,261 @@
+{
+  "info": {
+    "_postman_id": "9f841b69-3612-42e3-81a4-2f5b57a1b075",
+    "name": "Supliers",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57907593"
+  },
+  "item": [
+    {
+      "name": "Listagem",
+      "item": [
+        {
+          "name": "Listar fornecedores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://northwind-test-platform.vercel.app/api/v1/suppliers?search=Tech",
+              "protocol": "https",
+              "host": [
+                "northwind-test-platform",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "suppliers"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Tech"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar fornecedores por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://northwind-test-platform.vercel.app/api/v1/suppliers/:id",
+              "protocol": "https",
+              "host": [
+                "northwind-test-platform",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "suppliers",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exclusão de fornecedor por ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://northwind-test-platform.vercel.app/api/v1/suppliers/:id",
+              "protocol": "https",
+              "host": [
+                "northwind-test-platform",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "suppliers",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1675"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exclusão de fornecedor inexistente",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://northwind-test-platform.vercel.app/api/v1/suppliers/:id",
+              "protocol": "https",
+              "host": [
+                "northwind-test-platform",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "suppliers",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2429"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cadastro",
+      "item": [
+        {
+          "name": "Teste de importacao",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "https://northwind-test-platform.vercel.app/api/v1/suppliers/1",
+              "protocol": "https",
+              "host": [
+                "northwind-test-platform",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "suppliers",
+                "1"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://northwind-test-platform.vercel.app/api/v1/suppliers/1' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer {{json_web_token_0ftm}}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Validar campos obrigatorios",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{json_web_token_0zd2}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"company_name\": null,\r\n  \"contact_name\": null,\r\n  \"email\": null,\r\n  \"phone\": null,\r\n  \"cnpj\": null,\r\n  \"uf\": null\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://northwind-test-platform.vercel.app/api/v1/suppliers",
+              "protocol": "https",
+              "host": [
+                "northwind-test-platform",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "suppliers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  }
+}
